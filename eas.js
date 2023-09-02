@@ -2,14 +2,15 @@ const container = document.querySelector('.container');
 
 const squareContDiv = document.createElement('div');
 const squareDiv = document.createElement('div');
-
-
+squareContDiv.classList.add('sqr-cont');
+squareDiv.classList.add('square')
 // -----------function------------------
 function addContainter(num = 16) {
   for (i = 0; i < num; i += 1) {
     cloneContDiv = squareContDiv.cloneNode(true);
-    container.append(cloneContDiv);
     squareContDiv.classList.add('sqr-cont');
+    container.append(cloneContDiv);
+    
   }
 }
 addContainter(); //to add containers for squares
@@ -22,7 +23,6 @@ function addSquares(num = 16) {
     for (i = 0; i < num; i += 1) {
       cloneSquares = squareDiv.cloneNode(true);
       div.append(cloneSquares);
-      squareDiv.classList.add('square')
     }
   })
 }

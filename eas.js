@@ -26,6 +26,6 @@ function addSquares(num = 16) {
     }
   })
 }
-addSquares();
+addSquares(); //to add squares
 //---------------------------------------------------
 

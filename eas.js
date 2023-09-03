@@ -8,7 +8,7 @@ const squareDiv = document.createElement('div');
 squareContDiv.classList.add('sqr-cont');
 squareDiv.classList.add('square')
 
-// -----------function-for adding squares----------------
+// -----------function for current grid----------------
 function addSquares(row = 16, column = 16) {
   for (i = 0; i < row; i += 1) {
     cloneContDiv = squareContDiv.cloneNode(true);
@@ -24,7 +24,7 @@ function addSquares(row = 16, column = 16) {
   })
 }
 addSquares()
-//--------------------------------------------------------
+//-------------------promt and clear current grid-------------------
 const promptButton = document.querySelector('.prompt-button');
 promptButton.addEventListener('click', e => {
   let container = document.querySelector('.container');
@@ -33,12 +33,10 @@ promptButton.addEventListener('click', e => {
   
   let row = window.prompt('enter row number');
   let column = window.prompt('enter column number');
-
+// -------------add new grid---------------------------------------
   let newContainer = document.createElement('div');
   bodyContainer.insertBefore(newContainer, footer);
   newContainer.classList.add('container');
-  
-  
   
   function newAddSquares(row, column) {
     for (i = 0; i < row; i += 1) {
@@ -55,6 +53,4 @@ promptButton.addEventListener('click', e => {
     })
   }
   newAddSquares(row, column);
-
-  
 })

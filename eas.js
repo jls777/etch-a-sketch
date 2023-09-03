@@ -13,7 +13,7 @@ function addContainter(num = 16) {
     
   }
 }
-addContainter(); //to add containers for squares
+addContainter(100); //to add containers for squares
 // ----------------------
 
 //----------function for adding squares-----------------
@@ -26,6 +26,6 @@ function addSquares(num = 16) {
     }
   })
 }
-addSquares(); //to add squares
+addSquares(100); //to add squares
 //---------------------------------------------------
 

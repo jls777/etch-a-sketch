@@ -19,3 +19,12 @@
 .square:hover {
   background-color: yellow;
 }
+
+body {
+  border: 5px solid red;
+}
+
+.body-container {
+  width: 1000px;
+  border: 5px solid blue;
+}

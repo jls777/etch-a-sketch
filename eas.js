@@ -33,6 +33,10 @@ promptButton.addEventListener('click', e => {
   
   let row = window.prompt('enter row number');
   let column = window.prompt('enter column number');
+  if (!Number.isInteger(row)) return 'Error';
+  if (!Number.isInteger(column)) return 'Error';
+  if (row <= 0) return 'Error';
+  if (column <= 0) return 'Error';
 // -------------add new grid---------------------------------------
   let newContainer = document.createElement('div');
   bodyContainer.insertBefore(newContainer, footer);

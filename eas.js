@@ -5,9 +5,10 @@ let footer = document.querySelector('.footer');
 //-----------------------------------------
 const squareContDiv = document.createElement('div');
 const squareDiv = document.createElement('div');
+const errorDiv = document.createElement('div');
 squareContDiv.classList.add('sqr-cont');
-squareDiv.classList.add('square')
-
+squareDiv.classList.add('square');
+errorDiv.classList.add('error');
 // -----------function for current grid----------------
 function addSquares(row = 16, column = 16) {
   for (i = 0; i < row; i += 1) {
@@ -31,18 +32,21 @@ promptButton.addEventListener('click', e => {
   
   container.remove()
   
-  let row = window.prompt('enter row number');
+  let row = window.prompt('enter row number'); 
   let column = window.prompt('enter column number');
-  if (!Number.isInteger(row)) return 'Error';
-  if (!Number.isInteger(column)) return 'Error';
-  if (row <= 0) return 'Error';
-  if (column <= 0) return 'Error';
+  
 // -------------add new grid---------------------------------------
   let newContainer = document.createElement('div');
   bodyContainer.insertBefore(newContainer, footer);
   newContainer.classList.add('container');
   
   function newAddSquares(row, column) {
+    if (row <= 0 || column <= 0) {
+      newContainer.append(errorDiv)
+      errorDiv.textContent = "Error"
+    }
+    
+   
     for (i = 0; i < row; i += 1) {
       cloneContDiv = squareContDiv.cloneNode(true);
       squareContDiv.classList.add('sqr-cont');

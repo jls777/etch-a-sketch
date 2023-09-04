@@ -26,6 +26,11 @@ body {
   justify-content: center;
 }
 
+.error {
+  font-size: 100px;
+  font-weight: bold;
+}
+
 .square {
   width: 7px;
   height: 7px;

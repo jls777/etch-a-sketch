@@ -41,17 +41,18 @@ promptButton.addEventListener('click', e => {
   newContainer.classList.add('container');
   
   function newAddSquares(row, column) {
+    // -------error prompt--------------------
     if (row <= 0 || column <= 0) {
       newContainer.append(errorDiv)
       errorDiv.textContent = "Error"
     }
-    
-   
+    // ------------add row------------------
     for (i = 0; i < row; i += 1) {
       cloneContDiv = squareContDiv.cloneNode(true);
       squareContDiv.classList.add('sqr-cont');
       newContainer.append(cloneContDiv);
     }
+    //--------------add column----------------
     let squareContainer = document.querySelectorAll('.sqr-cont');
     squareContainer.forEach(div => {
       for (i = 0; i < column; i += 1) {

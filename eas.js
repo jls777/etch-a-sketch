@@ -63,3 +63,6 @@ promptButton.addEventListener('click', e => {
   }
   newAddSquares(row, column);
 })
+
+//--------------------------------------------
+let square = document.querySelector('.square');

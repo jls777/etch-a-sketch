@@ -81,7 +81,7 @@ promptButton.addEventListener('click', e => {
   }))
 })
 
-//--------------------------------------------
+//--------------select square------------------------------
 let square = document.querySelectorAll('.square');
 
 square.forEach(sqr => sqr.addEventListener('click', e => {

@@ -42,10 +42,11 @@ promptButton.addEventListener('click', e => {
   
   function newAddSquares(row, column) {
     // -------error prompt--------------------
-    if (row <= 0 || column <= 0) {
+    if ((row <= 0 || column <= 0) || (typeof row && typeof column !== 'number')) {
       newContainer.append(errorDiv)
       errorDiv.textContent = "Error"
     }
+
     // ------------add row------------------
     for (i = 0; i < row; i += 1) {
       cloneContDiv = squareContDiv.cloneNode(true);

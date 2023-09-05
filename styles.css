@@ -27,7 +27,6 @@ body {
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 777px;
   height: 777px;
   border: 2px solid black;
@@ -51,6 +50,7 @@ body {
 .error {
   font-size: 100px;
   font-weight: bold;
+  
 }
 
 .square {

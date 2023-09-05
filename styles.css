@@ -24,6 +24,23 @@ body {
 .container {
   display: flex;
   justify-content: center;
+  width: 980px;
+  height: 980px;
+  border: 2px solid black;
+}
+.container div {
+  flex: 1;
+}
+
+.sqr-cont {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+}
+
+.sqr-count div {
+  flex: 1;
 }
 
 .error {
@@ -32,10 +49,10 @@ body {
 }
 
 .square {
-  width: 7px;
-  height: 7px;
+  /* width: 7px;
+  height: 7px; */
   background-color: pink;
-  border: 2px solid black;
+  
 }
 
 .square:hover {

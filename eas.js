@@ -67,3 +67,7 @@ promptButton.addEventListener('click', e => {
 
 //--------------------------------------------
 let square = document.querySelector('.square');
+
+square.addEventListener('click', e => {
+  
+})

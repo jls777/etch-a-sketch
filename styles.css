@@ -12,21 +12,27 @@ body {
 .body-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 1000px;
+  width: 800px;
   height: 100%;
-  border: 5px solid blue;
-  margin: 0 auto;
+  margin: auto;
 }
 
-
+.header {
+  padding-top: 20px;
+}
+.prompt-button {
+  width: 70px;
+  height: 30px;
+}
 
 .container {
   display: flex;
   justify-content: center;
-  width: 980px;
-  height: 980px;
+  align-items: center;
+  width: 777px;
+  height: 777px;
   border: 2px solid black;
+  margin: auto;
 }
 .container div {
   flex: 1;

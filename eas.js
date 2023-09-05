@@ -107,14 +107,6 @@ square.forEach(select =>{
     e.target.removeAttribute('style');
   })
 })
-//------------hover selected squares------------------
-
-let selected = document.querySelectorAll('.select');
-selected.forEach(select => {
-  select.addEventListener('mouseover', e => {
-    console.log(e);
-  })
-})
 
 //-----------reset---------------
 

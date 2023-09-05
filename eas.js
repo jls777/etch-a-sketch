@@ -71,13 +71,33 @@ promptButton.addEventListener('click', e => {
     })
   }
   newAddSquares(row, column);
+  // ----------select square-------------------
+  let square = document.querySelectorAll('.square');
+
+  square.forEach(sqr => sqr.addEventListener('click', e => {
+    e.target.classList.add('select');
+    let select = document.querySelectorAll('.select');
+    select.forEach(selected => selected.style.backgroundColor = 'black');
+  }))
 })
 
 //--------------------------------------------
-let square = document.querySelector('.square');
+let square = document.querySelectorAll('.square');
 
-square.addEventListener('click', e => {
+square.forEach(sqr => sqr.addEventListener('click', e => {
   e.target.classList.add('select');
-  
-})
+  let select = document.querySelectorAll('.select');
+  select.forEach(selected => selected.style.backgroundColor = 'black');
+}))
 
+//-----------reset---------------
+
+function resetFunction() {
+  let square = document.querySelectorAll('.select');
+  square.forEach(sqr =>{
+    sqr.classList.remove('select');
+    sqr.removeAttribute('style')
+  })
+}
+let reset = document.querySelector('.reset');
+reset.addEventListener('click', e => resetFunction())

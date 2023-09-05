@@ -42,17 +42,17 @@ promptButton.addEventListener('click', e => {
   
   function newAddSquares(row, column) {
     // -------error prompt--------------------
+    if (isNaN(row) || isNaN(column)) {
+      newContainer.append(errorDiv)
+      return errorDiv.textContent = 'Error';
+    }
     if (row <= 0 || column <= 0) {
       newContainer.append(errorDiv)
-      return errorDiv.textContent = "Error";
+      return errorDiv.textContent = 'Error';
     }
     if (row > 100 || column > 100) {
       newContainer.append(errorDiv)
-      return errorDiv.textContent = "Error";
-    }
-    if (typeof row && typeof column !== 'number') {
-      newContainer.append(errorDiv)
-      return errorDiv.textContent = "Error";
+      return errorDiv.textContent = 'Error';
     }
 
     // ------------add row------------------

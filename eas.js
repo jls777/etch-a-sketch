@@ -94,7 +94,9 @@ let square = document.querySelectorAll('.square');
 square.forEach(sqr => sqr.addEventListener('click', e => {
   e.target.classList.add('select');
   let select = document.querySelectorAll('.select');
-  select.forEach(selected => selected.style.backgroundColor = 'black');
+  select.forEach(selected => {
+  selected.style.backgroundColor = 'black';
+  });
 }))
 
 //--------------unselect squares-------------------
@@ -103,6 +105,14 @@ square.forEach(select =>{
   select.addEventListener('dblclick', e => {
     e.target.classList.remove('select');
     e.target.removeAttribute('style');
+  })
+})
+//------------hover selected squares------------------
+
+let selected = document.querySelectorAll('.select');
+selected.forEach(select => {
+  select.addEventListener('mouseover', e => {
+    console.log(e);
   })
 })
 

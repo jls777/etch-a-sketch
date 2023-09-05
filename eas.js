@@ -42,9 +42,17 @@ promptButton.addEventListener('click', e => {
   
   function newAddSquares(row, column) {
     // -------error prompt--------------------
-    if ((row <= 0 || column <= 0) || (typeof row && typeof column !== 'number')) {
+    if (row <= 0 || column <= 0) {
       newContainer.append(errorDiv)
-      errorDiv.textContent = "Error"
+      return errorDiv.textContent = "Error";
+    }
+    if (row > 100 || column > 100) {
+      newContainer.append(errorDiv)
+      return errorDiv.textContent = "Error";
+    }
+    if (typeof row && typeof column !== 'number') {
+      newContainer.append(errorDiv)
+      return errorDiv.textContent = "Error";
     }
 
     // ------------add row------------------
@@ -69,5 +77,7 @@ promptButton.addEventListener('click', e => {
 let square = document.querySelector('.square');
 
 square.addEventListener('click', e => {
+  e.target.classList.add('select');
   
 })
+

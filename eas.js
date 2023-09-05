@@ -79,6 +79,13 @@ promptButton.addEventListener('click', e => {
     let select = document.querySelectorAll('.select');
     select.forEach(selected => selected.style.backgroundColor = 'black');
   }))
+  //-----------unselect square---------------------------
+  square.forEach(select =>{
+    select.addEventListener('dblclick', e => {
+    e.target.classList.remove('select');
+    e.target.removeAttribute('style');
+    })
+  })
 })
 
 //--------------select square------------------------------
@@ -89,6 +96,15 @@ square.forEach(sqr => sqr.addEventListener('click', e => {
   let select = document.querySelectorAll('.select');
   select.forEach(selected => selected.style.backgroundColor = 'black');
 }))
+
+//--------------unselect squares-------------------
+
+square.forEach(select =>{
+  select.addEventListener('dblclick', e => {
+    e.target.classList.remove('select');
+    e.target.removeAttribute('style');
+  })
+})
 
 //-----------reset---------------
 
